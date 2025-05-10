@@ -59,14 +59,17 @@ const rollPhase = () => {
       
       <div className="player-hp">
   {playerHP.map((hp, idx) => (
-    <div key={idx} className="hp-counter">
-      <div className="hp-controls">
-        <button onClick={() => updateHP(idx, -1)}>-</button>
-        <span>{hp}</span>
-        <button onClick={() => updateHP(idx, 1)}>+</button>
-      </div>
+  <div key={idx} className="hp-counter">
+    <h2 style={{ textAlign: "center", marginBottom: "0.5rem" }}>
+      {`Player ${idx + 1}`}
+    </h2>
+    <div className="hp-controls">
+      <button onClick={() => updateHP(idx, -1)}>-</button>
+      <span>{hp}</span>
+      <button onClick={() => updateHP(idx, 1)}>+</button>
     </div>
-  ))}
+  </div>
+))}
 </div>
 
       <div className="unit-form">
