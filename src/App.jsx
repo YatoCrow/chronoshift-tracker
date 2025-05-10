@@ -43,15 +43,16 @@ function ChronoshiftTracker() {
 
       
       <div className="player-hp">
-        {playerHP.map((hp, idx) => (
-          <div key={idx} className="player-box">
-            <h2>Player {idx + 1} HP</h2>
-            <button onClick={() => updateHP(idx, -1)}>-</button>
-            <span>{hp}</span>
-            <button onClick={() => updateHP(idx, 1)}>+</button>
-          </div>
-        ))}
+  {playerHP.map((hp, idx) => (
+    <div key={idx} className="hp-counter">
+      <div className="hp-controls">
+        <button onClick={() => updateHP(idx, -1)}>-</button>
+        <span>{hp}</span>
+        <button onClick={() => updateHP(idx, 1)}>+</button>
       </div>
+    </div>
+  ))}
+</div>
 
       <div className="unit-form">
         <input
