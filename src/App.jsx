@@ -5,6 +5,7 @@ function ChronoshiftTracker() {
   const [playerHP, setPlayerHP] = useState([30, 30]);
   const [units, setUnits] = useState([]);
   const [newUnit, setNewUnit] = useState({ name: "", atk: "", hp: "" });
+  const [theme, setTheme] = useState("night");
 
   const updateHP = (index, delta) => {
     setPlayerHP((prev) => {
@@ -33,8 +34,9 @@ function ChronoshiftTracker() {
   };
 
   return (
-    <div className="container">
-      <h1>Chronoshift Tracker</h1>
+    <div className={`theme-${theme}`}>
+    <h1>Chronoshift Tracker</h1>
+    <button onClick={() => setTheme("night")}>Night Phase 🌑</button>
 
       <div className="player-hp">
         {playerHP.map((hp, idx) => (
