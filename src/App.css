@@ -128,3 +128,56 @@ body {
     gap: 1rem;
   }
 }
+
+/* ===== FULL MOON PHASE THEME ===== */
+.theme-fullmoon {
+  background: radial-gradient(#182645, #0a0f1a);
+  color: #aadbff;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+}
+
+.theme-fullmoon h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #d6f3ff;
+  text-shadow: 0 0 12px #aadbff, 0 0 20px #74bdf8;
+}
+
+.theme-fullmoon .hp-counter {
+  background-color: #141f3a;
+  border: 2px solid #3a5c91;
+  color: #d6f3ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 0 12px #6a93d8aa;
+}
+
+.theme-fullmoon .unit-card {
+  background-color: #0f1a2f;
+  border: 1px solid #3a5c91;
+  color: #d6f3ff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 6px #aadbff33;
+}
+
+.theme-fullmoon button {
+  background-color: #20345d;
+  color: #d6f3ff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #aadbff55;
+}
+
+.theme-fullmoon button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #aadbffaa;
+}
