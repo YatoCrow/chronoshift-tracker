@@ -38,7 +38,9 @@ body {
 }
 /* NIGHT PHASE THEME */
 .theme-night {
-  background: radial-gradient(#2a0e13, #0b0304);
+  background: url("https://www.transparenttextures.com/patterns/dark-fish-skin.png"), radial-gradient(#2a0e13, #0b0304);
+  background-blend-mode: overlay;
+  background-size: cover;
   color: #ff4c4c;
   min-height: 100vh;
   padding: 1rem;
@@ -71,4 +73,11 @@ body {
   padding: 0.4rem 0.8rem;
   margin: 0.2rem;
   border-radius: 4px;
+}
+
+.theme-night h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff4c4c;
+  text-shadow: 0 0 10px #6c0a25;
 }
