@@ -352,32 +352,3 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px #d8b78eaa;
 }
-
-/* === GLOBAL CENTERING FIXES === */
-.player-hp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hp-counter {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.hp-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.unit-form,
-button,
-input {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-}
