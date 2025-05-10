@@ -8,6 +8,7 @@ function ChronoshiftTracker() {
   const [theme, setTheme] = useState("night");
   const [playerLabels, setPlayerLabels] = useState(["", ""]);
   const [showHelp, setShowHelp] = useState(false);
+  const [showQR, setShowQR] = useState(false);
 
 const rollPhase = () => {
   const roll = Math.floor(Math.random() * 6) + 1;
@@ -102,6 +103,20 @@ const rollPhase = () => {
       <li>🌕 Time Phases affect your cards</li>
       <li>🔁 Use Reset to start over anytime</li>
     </ul>
+    <div style={{ textAlign: "center", marginTop: "1rem" }}>
+  <button onClick={() => setShowQR(!showQR)}>📱 Share Tracker</button>
+</div>
+
+{showQR && (
+  <div style={{ textAlign: "center", marginTop: "1rem" }}>
+    <img
+      src="/chronoshift_tracker_qr.png"
+      alt="Scan to open Chronoshift Tracker"
+      style={{ width: "200px", borderRadius: "8px", boxShadow: "0 0 10px #00000088" }}
+    />
+    <p style={{ fontSize: "0.85rem", color: "#888" }}>Scan this code from another device</p>
+  </div>
+)}
   </div>
 )}
 </div>
