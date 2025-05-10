@@ -40,6 +40,7 @@ function ChronoshiftTracker() {
   <button onClick={() => setTheme("fullmoon")}>🌕 Full Moon Phase</button>
     <button onClick={() => setTheme("day")}>☀️ Day Phase</button>
     <button onClick={() => setTheme("scorch")}>🔥 Scorch Phase</button>
+    <button onClick={() => setTheme("dusk")}>🌆 Dusk Phase</button>
 </div>
     <h1>Chronoshift Tracker</h1>
 
