@@ -40,8 +40,8 @@ function ChronoshiftTracker() {
   <button onClick={() => setTheme("fullmoon")}>🌕 Full Moon Phase</button>
 </div>
     <h1>Chronoshift Tracker</h1>
-    <button onClick={() => setTheme("night")}>Night Phase 🌑</button>
 
+      
       <div className="player-hp">
         {playerHP.map((hp, idx) => (
           <div key={idx} className="player-box">
