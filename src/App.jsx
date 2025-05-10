@@ -7,6 +7,14 @@ function ChronoshiftTracker() {
   const [newUnit, setNewUnit] = useState({ name: "", atk: "", hp: "" });
   const [theme, setTheme] = useState("night");
 
+const rollPhase = () => {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  if (roll === 6) return; // retain current phase
+
+  const phases = ["night", "fullmoon", "day", "scorch", "dusk"];
+  setTheme(phases[roll - 1]);
+};
+  
   const updateHP = (index, delta) => {
     setPlayerHP((prev) => {
       const copy = [...prev];
@@ -42,6 +50,10 @@ function ChronoshiftTracker() {
     <button onClick={() => setTheme("scorch")}>🔥 Scorch Phase</button>
     <button onClick={() => setTheme("dusk")}>🌆 Dusk Phase</button>
 </div>
+<div style={{ textAlign: "center", marginBottom: "1rem" }}>
+  <button onClick={rollPhase}>🎲 Roll Phase</button>
+</div>
+      
     <h1>Chronoshift Tracker</h1>
 
       
