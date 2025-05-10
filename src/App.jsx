@@ -9,13 +9,21 @@ function ChronoshiftTracker() {
   const [playerLabels, setPlayerLabels] = useState(["", ""]);
   const [showHelp, setShowHelp] = useState(false);
   const [showQR, setShowQR] = useState(false);
+  const [rolledNumber, setRolledNumber] = useState(null);
+const [rolling, setRolling] = useState(false);
 
 const rollPhase = () => {
-  const roll = Math.floor(Math.random() * 6) + 1;
-  if (roll === 6) return; // retain current phase
+  setRolling(true);
+  setTimeout(() => {
+    const roll = Math.floor(Math.random() * 6) + 1;
+    setRolledNumber(roll);
+    setRolling(false);
 
-  const phases = ["night", "fullmoon", "day", "scorch", "dusk"];
-  setTheme(phases[roll - 1]);
+    if (roll === 6) return; // Retain current phase
+
+    const phases = ["night", "fullmoon", "day", "scorch", "dusk"];
+    setTheme(phases[roll - 1]);
+  }, 600); // Simulate a roll delay
 };
   
   const updateHP = (index, delta) => {
@@ -119,6 +127,13 @@ const rollPhase = () => {
 )}
   </div>
 )}
+</div>
+      <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
+  {rolling ? (
+    <div className="dice rolling">🎲</div>
+  ) : rolledNumber !== null ? (
+    <div className="dice">You rolled: {rolledNumber}</div>
+  ) : null}
 </div>
 <div style={{ textAlign: "center", marginBottom: "1rem" }}>
   <button onClick={rollPhase}>🎲 Roll Phase</button>
