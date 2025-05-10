@@ -331,6 +331,27 @@ body {
   100% { transform: rotate(0deg); }
 }
 
+/* Dice Result Styling for Each Theme */
+.theme-night .dice {
+  color: #ff4c4c;
+}
+
+.theme-fullmoon .dice {
+  color: #aadbff;
+}
+
+.theme-day .dice {
+  color: #3b2d05;
+}
+
+.theme-scorch .dice {
+  color: #ffae66;
+}
+
+.theme-dusk .dice {
+  color: #f4dcb2;
+}
+
 /* ===== MOBILE OPTIMIZATION FOR ALL THEMES ===== */
 @media (max-width: 768px) {
   .player-hp {
