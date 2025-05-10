@@ -244,3 +244,57 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ffdc8baa;
 }
+
+/* ===== SCORCH PHASE THEME ===== */
+.theme-scorch {
+  background: linear-gradient(to bottom, #2b0b0b, #5c1b00);
+  color: #ffae66;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+.theme-scorch h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff7633;
+  text-shadow: 0 0 10px #ff5400, 0 0 20px #ff8c42;
+}
+
+.theme-scorch .hp-counter {
+  background-color: #3a0a00;
+  border: 2px solid #ff5a36;
+  color: #ffb088;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 0 15px #ff6f2ecc;
+}
+
+.theme-scorch .unit-card {
+  background-color: #4a1303;
+  border: 1px solid #ff7b3b;
+  color: #ffd1b3;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 8px #ff873366;
+}
+
+.theme-scorch button {
+  background-color: #991f00;
+  color: #ffd7b0;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #ff540066;
+}
+
+.theme-scorch button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff7633aa;
+}
