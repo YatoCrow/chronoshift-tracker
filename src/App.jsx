@@ -7,6 +7,7 @@ function ChronoshiftTracker() {
   const [newUnit, setNewUnit] = useState({ name: "", atk: "", hp: "" });
   const [theme, setTheme] = useState("night");
   const [playerLabels, setPlayerLabels] = useState(["", ""]);
+  const [showHelp, setShowHelp] = useState(false);
 
 const rollPhase = () => {
   const roll = Math.floor(Math.random() * 6) + 1;
@@ -56,6 +57,53 @@ const rollPhase = () => {
     <button onClick={() => setTheme("day")}>☀️ Day Phase</button>
     <button onClick={() => setTheme("scorch")}>🔥 Scorch Phase</button>
     <button onClick={() => setTheme("dusk")}>🌆 Dusk Phase</button>
+    {/* Floating Help Button */}
+<button
+  onClick={() => setShowHelp(!showHelp)}
+  style={{
+    position: "fixed",
+    bottom: "1rem",
+    right: "1rem",
+    borderRadius: "50%",
+    width: "3rem",
+    height: "3rem",
+    fontSize: "1.5rem",
+    backgroundColor: "#333",
+    color: "#fff",
+    border: "none",
+    boxShadow: "0 0 10px #00000088",
+    zIndex: 1000
+  }}
+>
+  ?
+</button>
+
+{/* Help Panel */}
+{showHelp && (
+  <div
+    style={{
+      position: "fixed",
+      bottom: "5rem",
+      right: "1rem",
+      width: "300px",
+      backgroundColor: "#1a1a1a",
+      color: "#fff",
+      padding: "1rem",
+      borderRadius: "8px",
+      boxShadow: "0 0 12px #00000099",
+      zIndex: 999
+    }}
+  >
+    <h3 style={{ marginTop: 0 }}>Chronoshift Tracker Help</h3>
+    <ul style={{ paddingLeft: "1rem", fontSize: "0.9rem" }}>
+      <li>🎯 Track player HP</li>
+      <li>✏️ Click labels to rename clans</li>
+      <li>🎲 Use “Roll Phase” to shift time</li>
+      <li>🌕 Time Phases affect your cards</li>
+      <li>🔁 Use Reset to start over anytime</li>
+    </ul>
+  </div>
+)}
 </div>
 <div style={{ textAlign: "center", marginBottom: "1rem" }}>
   <button onClick={rollPhase}>🎲 Roll Phase</button>
