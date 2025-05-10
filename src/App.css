@@ -190,3 +190,57 @@ body {
   justify-content: center;
   gap: 1rem; /* space between - button, HP number, + button */
 }
+
+/* ===== DAY PHASE THEME ===== */
+.theme-day {
+  background: linear-gradient(to bottom, #fff6e0, #f0d283);
+  color: #3b2d05;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+.theme-day h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #c98c00;
+  text-shadow: 0 0 6px #ffe4a3;
+}
+
+.theme-day .hp-counter {
+  background-color: #fff2c0;
+  border: 2px solid #d1a527;
+  color: #4c3600;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 0 12px #ffebb0aa;
+}
+
+.theme-day .unit-card {
+  background-color: #fff6dc;
+  border: 1px solid #d1a527;
+  color: #3b2d05;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 6px #ffe6a633;
+}
+
+.theme-day button {
+  background-color: #ffe39b;
+  color: #3b2d05;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #fcd97477;
+}
+
+.theme-day button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffdc8baa;
+}
