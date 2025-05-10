@@ -298,3 +298,57 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ff7633aa;
 }
+
+/* ===== DUSK PHASE THEME ===== */
+.theme-dusk {
+  background: linear-gradient(to bottom, #2e1f3d, #4a3b2e);
+  color: #f4dcb2;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+.theme-dusk h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #e4c68f;
+  text-shadow: 0 0 10px #9d7a52, 0 0 20px #6e5273;
+}
+
+.theme-dusk .hp-counter {
+  background-color: #3d2d35;
+  border: 2px solid #b48e5c;
+  color: #f4e2c6;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 0 12px #a8846266;
+}
+
+.theme-dusk .unit-card {
+  background-color: #2a1d26;
+  border: 1px solid #b0936a;
+  color: #f4dcb2;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 6px #d6b28533;
+}
+
+.theme-dusk button {
+  background-color: #72544a;
+  color: #fbe9cc;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #cda26a55;
+}
+
+.theme-dusk button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #d8b78eaa;
+}
