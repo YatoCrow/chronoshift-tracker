@@ -49,21 +49,23 @@ body {
 
 .theme-night .hp-counter {
   background-color: #2a0e13;
-  color: #ff4c4c;
-  padding: 1rem;
   border: 2px solid #6c0a25;
-  border-radius: 8px;
+  color: #ff4c4c;
   text-align: center;
   font-size: 2rem;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #ff2e2e66;
 }
 
 .theme-night .unit-card {
   background-color: #1a060b;
   border: 1px solid #6c0a25;
   color: #ff4c4c;
-  padding: 1rem;
   border-radius: 6px;
-  margin-top: 0.5rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 0 8px #ff2e2e33;
 }
 
 .theme-night button {
@@ -73,11 +75,18 @@ body {
   padding: 0.4rem 0.8rem;
   margin: 0.2rem;
   border-radius: 4px;
+  box-shadow: 0 0 6px #ff4c4c55;
+  transition: transform 0.1s ease-in-out;
+}
+
+.theme-night button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff4c4caa;
 }
 
 .theme-night h1 {
   font-size: 2.5rem;
   text-align: center;
   color: #ff4c4c;
-  text-shadow: 0 0 10px #6c0a25;
+  text-shadow: 0 0 12px #ff2e2e, 0 0 20px #6c0a25;
 }
