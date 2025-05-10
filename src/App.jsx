@@ -6,7 +6,7 @@ function ChronoshiftTracker() {
   const [units, setUnits] = useState([]);
   const [newUnit, setNewUnit] = useState({ name: "", atk: "", hp: "" });
   const [theme, setTheme] = useState("night");
-  const [playerLabels, setPlayerLabels] = useState(["Player 1", "Player 2"]);
+  const [playerLabels, setPlayerLabels] = useState(["", ""]);
 
 const rollPhase = () => {
   const roll = Math.floor(Math.random() * 6) + 1;
