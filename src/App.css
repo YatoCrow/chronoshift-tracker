@@ -44,6 +44,7 @@ body {
   padding: 1rem;
   font-family: 'Cinzel', serif;
   position: relative;
+  transition: all 0.6s ease-in-out;
 }
 
 .theme-night .hp-counter {
@@ -137,6 +138,7 @@ body {
   padding: 1rem;
   font-family: 'Cinzel', serif;
   position: relative;
+  transition: all 0.6s ease-in-out;
 }
 
 .theme-fullmoon h1 {
