@@ -38,13 +38,28 @@ body {
 }
 /* NIGHT PHASE THEME */
 .theme-night {
-  background: url("https://www.transparenttextures.com/patterns/dark-fish-skin.png"), radial-gradient(#2a0e13, #0b0304);
-  background-blend-mode: overlay;
+  background: url("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1950&q=80");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #ff4c4c;
   min-height: 100vh;
   padding: 1rem;
   font-family: 'Cinzel', serif;
+  position: relative;
+}
+
+.theme-night::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20, 0, 10, 0.7); /* smoky crimson */
+  z-index: 0;
+}
+
+.theme-night > * {
+  position: relative;
+  z-index: 1;
 }
 
 .theme-night .hp-counter {
