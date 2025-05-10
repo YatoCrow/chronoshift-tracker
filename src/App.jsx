@@ -19,11 +19,16 @@ const rollPhase = () => {
     setRolledNumber(roll);
     setRolling(false);
 
-    if (roll === 6) return; // Retain current phase
+    if (roll === 6) return;
 
     const phases = ["night", "fullmoon", "day", "scorch", "dusk"];
     setTheme(phases[roll - 1]);
-  }, 600); // Simulate a roll delay
+
+    // Auto-hide result
+    setTimeout(() => {
+      setRolledNumber(null);
+    }, 3000);
+  }, 600);
 };
   
   const updateHP = (index, delta) => {
@@ -138,13 +143,17 @@ const rollPhase = () => {
 <div style={{ textAlign: "center", marginBottom: "1rem" }}>
   <button onClick={rollPhase}>🎲 Roll Phase</button>
 </div>
-      <div style={{ textAlign: "center", marginTop: "1rem" }}>
-  <button onClick={resetTracker}>🔁 Reset Tracker</button>
-</div>
-
       
     <h1>Chronoshift Tracker</h1>
 
+      <p style={{ textAlign: "center", fontWeight: "bold", fontSize: "1.1rem" }}>
+  Current Phase:{" "}
+  {theme === "night" && <>Night 🌑</>}
+  {theme === "fullmoon" && <>Full Moon 🌕</>}
+  {theme === "day" && <>Day ☀️</>}
+  {theme === "scorch" && <>Scorch 🔥</>}
+  {theme === "dusk" && <>Dusk 🌆</>}
+</p>
       
 <div className="player-hp">
   {playerHP.map((hp, idx) => (
@@ -220,6 +229,9 @@ const rollPhase = () => {
           </div>
         ))}
       </div>
+      <div style={{ textAlign: "center", marginTop: "1rem" }}>
+  <button onClick={resetTracker}>🔁 Reset Tracker</button>
+</div>
     </div>
   );
 }
