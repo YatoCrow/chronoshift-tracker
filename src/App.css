@@ -90,3 +90,42 @@ body {
   color: #ff4c4c;
   text-shadow: 0 0 12px #ff2e2e, 0 0 20px #6c0a25;
 }
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .theme-night h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hp-counter {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+  }
+
+  .unit-card {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .unit-form input {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+
+  .unit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .player-hp {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
