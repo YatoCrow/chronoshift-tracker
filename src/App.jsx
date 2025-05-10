@@ -35,6 +35,10 @@ function ChronoshiftTracker() {
 
   return (
     <div className={`theme-${theme}`}>
+  <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+  <button onClick={() => setTheme("night")}>🌑 Night Phase</button>
+  <button onClick={() => setTheme("fullmoon")}>🌕 Full Moon Phase</button>
+</div>
     <h1>Chronoshift Tracker</h1>
     <button onClick={() => setTheme("night")}>Night Phase 🌑</button>
 
