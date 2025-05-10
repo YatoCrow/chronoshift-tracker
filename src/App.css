@@ -181,3 +181,10 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px #aadbffaa;
 }
+
+.hp-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* space between - button, HP number, + button */
+}
