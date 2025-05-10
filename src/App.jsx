@@ -42,6 +42,12 @@ const rollPhase = () => {
     setUnits((prev) => prev.filter((unit) => unit.id !== id));
   };
 
+  const resetTracker = () => {
+  setPlayerHP([30, 30]);
+  setPlayerLabels(["Player 1", "Player 2"]);
+  setTheme("night"); // Optional: reset to default phase
+};
+
   return (
     <div className={`theme-${theme}`}>
   <div style={{ textAlign: "center", marginBottom: "1rem" }}>
@@ -54,6 +60,10 @@ const rollPhase = () => {
 <div style={{ textAlign: "center", marginBottom: "1rem" }}>
   <button onClick={rollPhase}>🎲 Roll Phase</button>
 </div>
+      <div style={{ textAlign: "center", marginTop: "1rem" }}>
+  <button onClick={resetTracker}>🔁 Reset Tracker</button>
+</div>
+
       
     <h1>Chronoshift Tracker</h1>
 
