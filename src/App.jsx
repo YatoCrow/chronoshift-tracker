@@ -62,25 +62,26 @@ const rollPhase = () => {
   {playerHP.map((hp, idx) => (
     <div key={idx} className="hp-counter">
       <input
-        type="text"
-        value={playerLabels[idx]}
-        onChange={(e) => {
-          const newLabels = [...playerLabels];
-          newLabels[idx] = e.target.value;
-          setPlayerLabels(newLabels);
-        }}
-        style={{
-          width: "100%",
-          marginBottom: "0.5rem",
-          textAlign: "center",
-          fontWeight: "bold",
-          fontSize: "1.1rem",
-          backgroundColor: "transparent",
-          color: "inherit",
-          border: "none",
-          borderBottom: "1px solid currentColor",
-        }}
-      />
+  type="text"
+  value={playerLabels[idx]}
+  placeholder="Click to name this Clan"
+  onChange={(e) => {
+    const newLabels = [...playerLabels];
+    newLabels[idx] = e.target.value;
+    setPlayerLabels(newLabels);
+  }}
+  style={{
+    width: "100%",
+    marginBottom: "0.5rem",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: "1.1rem",
+    backgroundColor: "transparent",
+    color: "inherit",
+    border: "none",
+    borderBottom: "1px solid currentColor",
+  }}
+/>
       <div className="hp-controls">
         <button onClick={() => updateHP(idx, -1)}>-</button>
         <span>{hp}</span>
