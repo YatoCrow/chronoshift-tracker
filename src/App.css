@@ -36,6 +36,7 @@ body {
   margin: 0.5rem 0;
   border-radius: 6px;
 }
+
 /* NIGHT PHASE THEME */
 .theme-night {
   background: radial-gradient(#2a0e13, #0b0304);
@@ -89,45 +90,6 @@ body {
   text-align: center;
   color: #ff4c4c;
   text-shadow: 0 0 12px #ff2e2e, 0 0 20px #6c0a25;
-}
-
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
-  .theme-night h1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .hp-counter {
-    font-size: 1.5rem;
-    padding: 0.6rem;
-  }
-
-  .unit-card {
-    font-size: 0.9rem;
-    padding: 0.75rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .unit-form input {
-    width: 100%;
-    margin-top: 0.3rem;
-  }
-
-  .unit-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .player-hp {
-    flex-direction: column;
-    gap: 1rem;
-  }
 }
 
 /* ===== FULL MOON PHASE THEME ===== */
@@ -351,4 +313,43 @@ body {
 .theme-dusk button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #d8b78eaa;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .theme-night h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hp-counter {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+  }
+
+  .unit-card {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .unit-form input {
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+
+  .unit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .player-hp {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
