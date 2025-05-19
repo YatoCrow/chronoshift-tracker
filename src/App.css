@@ -1,0 +1,92 @@
+/* Mobile Optimized Layout */
+@media (max-width: 640px) {
+  .tracker {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .hp {
+    font-size: 2.75rem;
+  }
+
+  .controls button {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.9rem;
+    margin: 0.25rem;
+  }
+
+  .time-phase {
+    padding: 1rem;
+  }
+
+  .phase-label {
+    font-size: 1.25rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phase-label-icon {
+    width: 1.15rem;
+    height: 1.15rem;
+    margin-right: 0.4rem;
+  }
+
+  button {
+    max-width: 100%;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.1);
+  }
+}
+
+.turn-tracker {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.turn-tracker button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  background-color: #333;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.faction-selectors {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.faction-selectors select {
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.phasebound-warning {
+  font-size: 0.9rem;
+  color: #ffcc88;
+  margin: 0.75rem 0;
+  text-align: center;
+}
+
+.phasebound-warning.passive {
+  font-size: 0.85rem;
+  color: #cccccc;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  opacity: 0.85;
+}

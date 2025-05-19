@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+
+# Production build output
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Vite cache
+.vite/
+
+# Mac system file
+Icon?
