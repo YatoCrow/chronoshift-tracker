@@ -31,10 +31,16 @@ body {
 }
 
 .hp {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: bold;
   color: #ffcc88;
-  text-shadow: 0 0 6px rgba(255, 204, 136, 0.3);
+  text-shadow: 0 0 8px rgba(255, 204, 136, 0.4);
+}
+
+@media (orientation: landscape) {
+  .hp {
+    font-size: 6rem;
+  }
 }
 
 .controls button {
