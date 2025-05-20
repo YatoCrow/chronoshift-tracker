@@ -13,11 +13,17 @@ body {
 
 .tracker {
   width: 100%;
-  max-width: 480px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .player {
@@ -26,7 +32,7 @@ body {
   padding: 1rem;
 }
 
-.top {
+.opponent {
   transform: rotate(180deg);
 }
 
@@ -35,12 +41,6 @@ body {
   font-weight: bold;
   color: #ffcc88;
   text-shadow: 0 0 8px rgba(255, 204, 136, 0.4);
-}
-
-@media (orientation: landscape) {
-  .hp {
-    font-size: 6rem;
-  }
 }
 
 .controls button {
@@ -91,4 +91,25 @@ body {
 .phase-label.rolling {
   opacity: 0.25;
   transform: scale(0.9);
+}
+
+@media (orientation: landscape) {
+  .players {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .player {
+    width: 48%;
+    padding: 0.5rem;
+  }
+
+  .time-phase {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hp {
+    font-size: 6rem;
+  }
 }
