@@ -62,12 +62,23 @@ function App() {
 
   return (
     <div className="tracker">
-      <div className="player top">
-        <div className="label">Player 1</div>
-        <div className="hp">{hp1}</div>
-        <div className="controls">
-          <button onClick={() => adjustHP(1, -1)}>-</button>
-          <button onClick={() => adjustHP(1, 1)}>+</button>
+      <div className="players">
+        <div className="player opponent">
+          <div className="label">Player 2</div>
+          <div className="hp">{hp2}</div>
+          <div className="controls">
+            <button onClick={() => adjustHP(2, -1)}>-</button>
+            <button onClick={() => adjustHP(2, 1)}>+</button>
+          </div>
+        </div>
+
+        <div className="player local">
+          <div className="label">Player 1</div>
+          <div className="hp">{hp1}</div>
+          <div className="controls">
+            <button onClick={() => adjustHP(1, -1)}>-</button>
+            <button onClick={() => adjustHP(1, 1)}>+</button>
+          </div>
         </div>
       </div>
 
@@ -82,15 +93,6 @@ function App() {
         </div>
         <button onClick={rollPhase}>Roll Phase</button>
         <button onClick={timecharge}>Timecharge</button>
-      </div>
-
-      <div className="player bottom">
-        <div className="label">Player 2</div>
-        <div className="hp">{hp2}</div>
-        <div className="controls">
-          <button onClick={() => adjustHP(2, -1)}>-</button>
-          <button onClick={() => adjustHP(2, 1)}>+</button>
-        </div>
       </div>
     </div>
   );
