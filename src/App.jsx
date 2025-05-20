@@ -23,6 +23,7 @@ function App() {
   const [phase, setPhase] = useState("Dusk");
   const [retainMode, setRetainMode] = useState(false);
   const [isRolling, setIsRolling] = useState(false);
+  const [showRollingText, setShowRollingText] = useState(false);
 
   const adjustHP = (player, amount) => {
     player === 1 ? setHp1(hp1 + amount) : setHp2(hp2 + amount);
@@ -30,6 +31,7 @@ function App() {
 
   const rollPhase = () => {
     setIsRolling(true);
+    setShowRollingText(true);
     setTimeout(() => {
       const roll = Math.floor(Math.random() * 6) + 1;
       if (roll === 6) {
@@ -39,7 +41,8 @@ function App() {
         setRetainMode(false);
       }
       setIsRolling(false);
-    }, 500);
+      setShowRollingText(false);
+    }, 800);
   };
 
   const timecharge = () => {
@@ -57,7 +60,11 @@ function App() {
     }
   };
 
-  const getPhaseLabel = () => retainMode ? `RETAIN: ${phase.toUpperCase()}` : phase.toUpperCase();
+  const getPhaseLabel = () => {
+    if (showRollingText) return "Rolling...";
+    return retainMode ? `RETAIN: ${phase.toUpperCase()}` : phase.toUpperCase();
+  };
+
   const getPhaseIcon = () => phaseIcons[phase];
 
   return (
@@ -83,15 +90,17 @@ function App() {
       </div>
 
       <div className="time-phase">
-        <div className={`phase-label ${isRolling ? 'rolling' : ''}`}>
-          <img
-            src={getPhaseIcon()}
-            alt={`${phase} icon`}
-            className="phase-label-icon"
-          />
+        <div className={`phase-label ${isRolling ? 'shake' : ''}`}>
+          {!showRollingText && (
+            <img
+              src={getPhaseIcon()}
+              alt={`${phase} icon`}
+              className="phase-label-icon"
+            />
+          )}
           {getPhaseLabel()}
         </div>
-        <button onClick={rollPhase}>Roll Phase</button>
+        <button onClick={rollPhase} disabled={isRolling}>Roll Phase</button>
         <button onClick={timecharge}>Timecharge</button>
       </div>
     </div>
